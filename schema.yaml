@@ -1,0 +1,15 @@
+CONTENT:
+ Trip_Distance_km: float64
+ Time_of_Day: object
+ Day_of_Week: object
+ Passenger_Count: float64
+ Traffic_Conditions: object 
+ Weather: object
+ Base_Fare: object
+ Per_Km_Rate: float64
+ Per_Minute_Rate: float64
+ Trip_Duration_Minutes: float64
+ Trip_Price: float64
+TARGET:
+ Name:
+ Trip_Price: float64
