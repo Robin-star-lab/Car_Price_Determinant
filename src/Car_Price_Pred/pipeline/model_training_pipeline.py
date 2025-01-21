@@ -18,3 +18,5 @@ class ModelTrainingPipeline():
          model_trainer.get_train_and_test_data()
         except Exception as e:
             raise CustomException(e,sys)
+        
+        

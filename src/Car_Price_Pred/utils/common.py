@@ -40,3 +40,18 @@ def save_parameters(params, filepath):
     # Assuming params is a dictionary or a list of dictionaries
     with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(params, f, indent=4, ensure_ascii=False)
+        
+        
+@ensure_annotations      
+def load_models(filepath):
+    with open(filepath, 'rb') as f:
+        model = joblib.load(f)
+        return model.decode('utf-8')
+
+
+@ensure_annotations
+def load_parameters(filepath):
+    with open(filepath, 'rb') as f:
+        params = json.load(f)
+        
+        return params
