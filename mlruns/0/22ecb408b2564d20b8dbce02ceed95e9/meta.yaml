@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Robin%20Aluma/Desktop/Car_Price_Pred/mlruns/0/22ecb408b2564d20b8dbce02ceed95e9/artifacts
+end_time: 1737578228600
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 22ecb408b2564d20b8dbce02ceed95e9
+run_name: silent-dove-998
+run_uuid: 22ecb408b2564d20b8dbce02ceed95e9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737578224052
+status: 4
+tags: []
+user_id: Robin Aluma

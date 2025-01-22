@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Robin%20Aluma/Desktop/Car_Price_Pred/mlruns/0/86ba87ea67714cfc8bcfa25aa4ead51a/artifacts
+end_time: 1737577614870
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 86ba87ea67714cfc8bcfa25aa4ead51a
+run_name: serious-wolf-292
+run_uuid: 86ba87ea67714cfc8bcfa25aa4ead51a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737577611847
+status: 4
+tags: []
+user_id: Robin Aluma

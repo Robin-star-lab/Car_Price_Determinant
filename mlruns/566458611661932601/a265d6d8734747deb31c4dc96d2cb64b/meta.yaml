@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Robin%20Aluma/Desktop/Car_Price_Pred/mlruns/566458611661932601/a265d6d8734747deb31c4dc96d2cb64b/artifacts
+end_time: 1737580597089
+entry_point_name: ''
+experiment_id: '566458611661932601'
+lifecycle_stage: active
+run_id: a265d6d8734747deb31c4dc96d2cb64b
+run_name: righteous-donkey-465
+run_uuid: a265d6d8734747deb31c4dc96d2cb64b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737580594356
+status: 4
+tags: []
+user_id: Robin Aluma

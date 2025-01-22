@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Robin%20Aluma/Desktop/Car_Price_Pred/mlruns/0/aef29c0d0c8e49b2be8b336a56b40242/artifacts
+end_time: 1737575925642
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: aef29c0d0c8e49b2be8b336a56b40242
+run_name: fortunate-snail-304
+run_uuid: aef29c0d0c8e49b2be8b336a56b40242
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737575922686
+status: 4
+tags: []
+user_id: Robin Aluma

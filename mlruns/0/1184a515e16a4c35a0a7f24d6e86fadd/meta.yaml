@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Robin%20Aluma/Desktop/Car_Price_Pred/mlruns/0/1184a515e16a4c35a0a7f24d6e86fadd/artifacts
+end_time: 1737577044478
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1184a515e16a4c35a0a7f24d6e86fadd
+run_name: nebulous-hare-969
+run_uuid: 1184a515e16a4c35a0a7f24d6e86fadd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737577044370
+status: 4
+tags: []
+user_id: Robin Aluma

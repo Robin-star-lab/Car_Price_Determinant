@@ -5,6 +5,8 @@ from src.Car_Price_Pred.entities import ModelEvaluationConfig
 import os
 import pandas as pd
 from logger import my_logger
+import mlflow
+from mlflow.models.signature import infer_signature
 
 
 
@@ -25,25 +27,43 @@ class ModelEvaluation():
         self.y_test = test_data.iloc[:,-1]
         x_train,x_test,y_train,y_test = train_test_split(self.x_test,self.y_test,test_size=0.3,random_state=42)
         
-        models = [
-            load_models(self.config.decision_tree),
-            load_models(self.config.lasso),
-            load_models(self.config.linear_regression),
-            load_models(self.config.neighbors),
-            load_models(self.config.svm),
-            load_models(self.config.random_forest)]
+        mlflow.set_experiment("Robins_Experiment")
+        with mlflow.start_run():
+            
+            
+            
+            models = [
+                load_models(self.config.decision_tree),
+                load_models(self.config.lasso),
+                load_models(self.config.linear_regression),
+                load_models(self.config.neighbors),
+                load_models(self.config.svm),
+                load_models(self.config.random_forest)]
         
-        best_model = None
-        best_score = 0
+            best_model = None
+            best_score = 0
         
-        for model in models:
-            model.fit(x_train,y_train)
-            self.y_predict = model.predict(x_test)
-            score = r2_score(y_test,self.y_predict)
-            if score > best_score:
-                best_model = model
-                best_score = score
-        
+            for model in models:
+                
+                model.fit(x_train,y_train)
+                self.y_predict = model.predict(x_test)
+                signature = infer_signature(x_test, self.y_predict)
+                input_example = x_test.iloc[0].to_dict()
+                
+                
+                score = r2_score(y_test,self.y_predict)
+                if score > best_score:
+                    best_model = model
+                    best_score = score
+            
+            mlflow.log_metric('best_score',best_score)
+            mlflow.sklearn.log_model(best_model,
+                                     artifact_path ="best_model",
+                                     signature=signature,
+                                     input_example=input_example)
+                    
+            
+            
         save_best_model(best_model,os.path.join(self.config.best_model_path,f"{best_model}_.joblib"))
         my_logger.info(f"Best Model is {best_model} with scores : {best_score}")
         save_scores(f"r_2score:{best_score}",os.path.join(self.config.scores_path,'scores.txt'))
