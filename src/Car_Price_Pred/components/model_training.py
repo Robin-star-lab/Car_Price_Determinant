@@ -12,7 +12,8 @@ from pathlib import Path
 import joblib 
 from src.Car_Price_Pred.config.configuration import ModelTrainingConfig
 import os
-from src.Car_Price_Pred.utils.common import save_models,save_parameters
+from src.Car_Price_Pred.utils.common import save_models,save_parameters,save_scores
+from logger import my_logger
 
 
 
@@ -58,5 +59,7 @@ class ModelTrainer():
                     best_score = score
                 save_models(best_model, os.path.join(self.config.root_url,f'{name}.joblib'))
                 save_parameters(params, os.path.join(self.config.root_url,'params.json'))
+                my_logger.info(f"Best Model is {best_model} with scores : {best_score}")
+                save_scores(f"r_2score:{best_score}",os.path.join(self.config.scores_path,'scores.txt'))
             except Exception as e:
                 raise CustomException(e,sys)

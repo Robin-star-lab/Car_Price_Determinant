@@ -3,6 +3,9 @@ from src.Car_Price_Pred.pipeline.data_evaluation_pipeline import DataValidationP
 from src.Car_Price_Pred.pipeline.data_transformation_pipeline import DataTransformationPipeline
 from src.Car_Price_Pred.pipeline.model_training_pipeline import ModelTrainingPipeline
 from logger import my_logger
+from src.Car_Price_Pred.pipeline.model_evaluation_pipeline import ModelEvaluationPipeline
+
+
 
 stage_name = 'Data Ingestion Stage'
 if __name__=='__main__':
@@ -39,3 +42,15 @@ if __name__=='__main__':
     
     
     my_logger.info(f"Stage : ==========={stage_name}=======Successfully implimented")
+    
+    
+
+stage_name = "Model Evaluation Stage"
+if __name__ == '__main__':
+    # Evaluate
+    obj = ModelEvaluationPipeline()
+    obj.main()
+    
+    
+    my_logger.info(f"Stage : ==========={stage_name}=======Successfully implimented")
+    

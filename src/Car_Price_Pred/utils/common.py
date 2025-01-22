@@ -55,3 +55,14 @@ def load_parameters(filepath):
         params = json.load(f)
         
         return params
+    
+@ensure_annotations
+def save_best_model(model, filepath):
+    with open(filepath, 'wb') as f:
+        joblib.dump(model,f)
+
+@ensure_annotations
+def save_scores(scores, filepath):
+    with open(filepath, 'w') as score_file:
+        score_file.write(f"{scores}/n")
+        

@@ -1,7 +1,7 @@
 from src.Car_Price_Pred.constants import *
 import yaml
 from src.Car_Price_Pred.utils.common import read_yaml,create_directories
-from src.Car_Price_Pred.entities import DataIngestionConfig,DataEvaluationConfig,DataTransformationConfig,ModelTrainingConfig
+from src.Car_Price_Pred.entities import DataIngestionConfig,DataEvaluationConfig,DataTransformationConfig,ModelTrainingConfig,ModelEvaluationConfig
 from logger import my_logger
 
 
@@ -123,3 +123,31 @@ class ModelTrainerConfigurationManager:
         )
         
         return get_model_trainer_config
+    
+    
+    
+class ModelEvaluationConfigurationManager:
+    def __init__(self, config_file_path = CONFIG_FILE_PATH):
+        self.config = read_yaml(config_file_path)
+        
+        create_directories([self.config.Artifacts_root])
+        
+    def get_model_evaluation_config(self)->ModelEvaluationConfig:
+        config = self.config.model_evaluation
+        
+        create_directories([config.root_url])
+        model_evaluation_config = ModelEvaluationConfig(
+            root_url = config.root_url,
+            evaluation_data = config.evaluation_data,
+            best_model_path = config.best_model_path,
+            scores_path = config.scores_path,
+            decision_tree = config.decision_tree,
+            lasso = config.lasso,
+            linear_regression = config.linear_regression,
+            neighbors = config.neighbors,
+            svm = config.svm,
+            random_forest = config.random_forest
+        )
+        
+        return model_evaluation_config
+    

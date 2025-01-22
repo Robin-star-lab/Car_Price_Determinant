@@ -48,3 +48,19 @@ class ModelTrainingConfig():
     kernel: str
     C: float
     epsilon: float
+    
+    
+    
+@dataclass
+class ModelEvaluationConfig():
+    root_url: Path
+    evaluation_data: Path
+    best_model_path: Path
+    scores_path: Path
+    decision_tree: str
+    lasso: str
+    linear_regression: str
+    neighbors: str
+    svm: str
+    random_forest: str
+    

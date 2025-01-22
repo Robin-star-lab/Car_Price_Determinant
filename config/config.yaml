@@ -27,6 +27,7 @@ model_evaluation:
  root_url: artifacts/model_evaluation
  evaluation_data: artifacts/data_transformation/test_data.csv
  best_model_path: artifacts/model_evaluation
+ scores_path: artifacts/model_evaluation
  decision_tree: artifacts\model_training\decision_tree.joblib
  lasso: artifacts\model_training\lasso.joblib
  linear_regression: artifacts\model_training\linear_regression.joblib
