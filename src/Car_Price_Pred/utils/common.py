@@ -46,7 +46,7 @@ def save_parameters(params, filepath):
 def load_models(filepath):
     with open(filepath, 'rb') as f:
         model = joblib.load(f)
-        return model.decode('utf-8')
+        return model
 
 
 @ensure_annotations
