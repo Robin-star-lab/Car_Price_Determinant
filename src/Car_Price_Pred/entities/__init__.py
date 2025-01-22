@@ -30,6 +30,7 @@ class ModelTrainingConfig():
     root_url: Path
     train_data: Path
     params: dict
+    scores_path: Path
     fit_intercept: bool
     n_jobs: int
     max_depth: int

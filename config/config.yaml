@@ -22,6 +22,7 @@ data_transformation:
 model_training:
  root_url: artifacts/model_training
  train_data: artifacts/data_transformation/train_data.csv
+ scores_path: artifacts/model_training
 
 model_evaluation:
  root_url: artifacts/model_evaluation

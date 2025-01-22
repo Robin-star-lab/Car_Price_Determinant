@@ -101,6 +101,7 @@ class ModelTrainerConfigurationManager:
             root_url = config.root_url,
             train_data = config.train_data,
             params = params,
+            scores_path = config.scores_path,
             fit_intercept = params.fit_intercept,
             n_jobs = params.n_jobs,
             max_depth = params.max_depth,
