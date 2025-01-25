@@ -55,7 +55,7 @@ class ModelEvaluation():
                 if score > best_score:
                     best_model = model
                     best_score = score
-            
+            mlflow.log_param('parameters',self.config.all_params)
             mlflow.log_metric('best_score',best_score)
             mlflow.sklearn.log_model(best_model,
                                      artifact_path ="best_model",

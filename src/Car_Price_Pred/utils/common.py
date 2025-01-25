@@ -6,6 +6,7 @@ from pathlib import Path
 from ensure import ensure_annotations
 from logger import my_logger
 import joblib
+import pickle
 import json
 
 
@@ -39,7 +40,7 @@ def save_models(model,file_path):
 def save_parameters(params, filepath):
     # Assuming params is a dictionary or a list of dictionaries
     with open(filepath, 'w', encoding='utf-8') as f:
-        json.dump(params, f, indent=4, ensure_ascii=False)
+        json.dump(params,f)
         
         
 @ensure_annotations      
@@ -52,7 +53,7 @@ def load_models(filepath):
 @ensure_annotations
 def load_parameters(filepath):
     with open(filepath, 'rb') as f:
-        params = json.load(f)
+        params = joblib.load(f)
         
         return params
     
@@ -65,4 +66,12 @@ def save_best_model(model, filepath):
 def save_scores(scores, filepath):
     with open(filepath, 'w') as score_file:
         score_file.write(f"{scores}/n")
+@ensure_annotations
+def save_json(preprocessor, filepath):
+    with open(filepath, 'wb') as pickle_obj:
+        pickle.dump(preprocessor,pickle_obj)
         
+def load_json(filepath):
+    with open(filepath, 'rb') as pickle_obj:
+        preprocessor = pickle.load(pickle_obj)
+        return preprocessor

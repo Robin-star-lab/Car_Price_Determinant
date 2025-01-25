@@ -73,7 +73,8 @@ class TransformationConfigurationManager:
         
         get_data_transformation_config = DataTransformationConfig(
             root_url = config.root_url,
-            data_dir = config.data_dir
+            data_dir = config.data_dir,
+            preprocessor_path=config.preprocessor_path
         )
         
         return get_data_transformation_config
@@ -128,13 +129,16 @@ class ModelTrainerConfigurationManager:
     
     
 class ModelEvaluationConfigurationManager:
-    def __init__(self, config_file_path = CONFIG_FILE_PATH):
+    def __init__(self, config_file_path = CONFIG_FILE_PATH,
+                 params_file_path = PARAMS_FILE_PATH):
         self.config = read_yaml(config_file_path)
+        self.params = read_yaml(params_file_path)
         
         create_directories([self.config.Artifacts_root])
         
     def get_model_evaluation_config(self)->ModelEvaluationConfig:
         config = self.config.model_evaluation
+        params = self.params.parameters
         
         create_directories([config.root_url])
         model_evaluation_config = ModelEvaluationConfig(
@@ -143,6 +147,7 @@ class ModelEvaluationConfigurationManager:
             best_model_path = config.best_model_path,
             scores_path = config.scores_path,
             decision_tree = config.decision_tree,
+            all_params = params,
             lasso = config.lasso,
             linear_regression = config.linear_regression,
             neighbors = config.neighbors,

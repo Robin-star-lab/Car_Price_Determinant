@@ -22,6 +22,7 @@ class DataTransformationConfig():
     # Data transformation configuration done here
     root_url: Path
     data_dir: Path
+    preprocessor_path: Path
     
     
 # Model training configuration
@@ -57,6 +58,7 @@ class ModelEvaluationConfig():
     root_url: Path
     evaluation_data: Path
     best_model_path: Path
+    all_params: dict
     scores_path: Path
     decision_tree: str
     lasso: str

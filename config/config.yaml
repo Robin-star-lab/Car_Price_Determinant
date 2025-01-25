@@ -17,6 +17,7 @@ data_evaluation:
 data_transformation:
  root_url: artifacts/data_transformation
  data_dir: artifacts/data_ingestion/taxi_trip_pricing.csv
+ preprocessor_path: artifacts/data_transformation
 
 
 model_training:
@@ -35,3 +36,9 @@ model_evaluation:
  neighbors: artifacts\model_training\neighbors.joblib
  svm: artifacts\model_training\svm.joblib
  random_forest: artifacts\model_training\random_forest.joblib
+
+prediction:
+root_url: artifacts/prediction
+prediction_model: artifacts\model_evaluation\RandomForestRegressor(max_depth=10)_.joblib
+preprocessor: artifacts\data_transformation\preprocessor.pkl
+

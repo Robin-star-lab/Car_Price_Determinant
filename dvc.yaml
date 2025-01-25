@@ -5,9 +5,9 @@ stages:
      - src\Car_Price_Pred\components\data_ingestion.py
      - config\config.yaml
     outs:
-     - .\artifacts\data_ingestion\data.zip
-     - .\artifacts\data_ingestion\status.txt
-     - .\artifacts\data_ingestion\taxi_trip_pricing.csv
+     - artifacts\data_ingestion\data.zip
+     - artifacts\data_ingestion\status.txt
+     - artifacts\data_ingestion\taxi_trip_pricing.csv
 
 
 

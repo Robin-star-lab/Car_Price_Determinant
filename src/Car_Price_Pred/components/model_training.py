@@ -58,7 +58,7 @@ class ModelTrainer():
                     best_model = model
                     best_score = score
                 save_models(best_model, os.path.join(self.config.root_url,f'{name}.joblib'))
-                save_parameters(params, os.path.join(self.config.root_url,'params.json'))
+                save_parameters(params, os.path.join(self.config.root_url,'param.json'))
                 my_logger.info(f"Best Model is {best_model} with scores : {best_score}")
                 save_scores(f"r_2score:{best_score}",os.path.join(self.config.scores_path,'scores.txt'))
             except Exception as e:

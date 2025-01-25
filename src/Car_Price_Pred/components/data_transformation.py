@@ -9,6 +9,8 @@ from src.Car_Price_Pred.config.configuration import DataTransformationConfig
 import pandas as pd
 from logger import my_logger
 import numpy as np
+import json
+from src.Car_Price_Pred.utils.common import save_json
 
 
 
@@ -49,6 +51,7 @@ class DataTransformation():
         preprocessor = ColumnTransformer([
              ('categorical', transformer_categorical, categorical_columns),
              ('numerical', transformer_numerical, numerical_columns)])
+        save_json(preprocessor,os.path.join(self.config.preprocessor_path,'preprocessor.pkl'))
 
         
         scaled_x_train = preprocessor.fit_transform(x_train)
