@@ -3,6 +3,7 @@ import yaml
 from src.Car_Price_Pred.utils.common import read_yaml,create_directories
 from src.Car_Price_Pred.entities import DataIngestionConfig,DataEvaluationConfig,DataTransformationConfig,ModelTrainingConfig,ModelEvaluationConfig
 from logger import my_logger
+from src.Car_Price_Pred.entities import PredictionConfig
 
 
 class ConfigurationManager:
@@ -156,4 +157,24 @@ class ModelEvaluationConfigurationManager:
         )
         
         return model_evaluation_config
+    
+    
+    
+class PredictionConfigurationManager():
+    def __init__(self,config_file_path = CONFIG_FILE_PATH):
+        self.config = read_yaml(config_file_path)
+        
+        create_directories([self.config.artifacts_root])
+    def get_prediction_config(self)->PredictionConfig:
+        config = self.config.prediction
+        
+        create_directories([config.root_url])
+        prediction_config = PredictionConfig(
+            root_url=config.root_url,
+            prediction_model=config.prediction_model,
+            preprocessor=config.preprocessor
+        )
+        
+        
+        return prediction_config
     
