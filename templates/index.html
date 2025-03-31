@@ -1,12 +1,499 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ten Input Form</title>
+  <title>Taxi Trip Price Prediction</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin:15px;
+      background:rgb(232, 236, 239);
+ 
+    }
+    .form-container {
+      width:50%;
+      margin: 0 auto;
+      border-radius:20px;
+      height:fit-content;
+     padding:30px 30px;
+      text-align:center;
+    float:right;
+    margin-left:10px;
+      
+      background:linear-gradient(135deg, #0f2f55 0%, #2A4D7E 100%);
+    }
+    .form-container h3{
+      color:#99cafa;
+      margin-bottom:30px;
+    }
+    form{
+      display:grid;
+      grid-template-columns:1fr 1fr ;
+      grid-template-rows:auto;
+      gap:20px;
+   
+    }
+  
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+ 
+    input, select {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border-radius:7.5px;
+      color:#dde0e4;
+      font-weight:lighter;
+    }
+    select{
+      background:transparent;
+      border:1px solid #99cafa;
+
+    }
+    option{
+      color:#0f2f55;
+    }
+    input{
+      background:transparent;
+      border:1px solid #99cafa;
+    }
+    ::-webkit-input-placeholder { /* Chrome/Safari */
+      color: #E2E6EA;
+    }
+    button {
+     
+      background-color: #f3b805;
+      color:#0f2f55;
+      padding: 12px 24px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: all 0.3s;
+    }
+    button:hover {
+     
+      transform: translateY(-3px);
+     
+      color:#0f2f55;
+      background:#d6a40d;
+      box-shadow: 0 5px 15px rgba(230, 174, 8, 0.3);
+    }
+   
+    .header{
+      width:100%;
+      height:100vh;
+      padding:20px 2px;
+      background:linear-gradient(rgb(10, 35, 66, 0.9), rgb(42, 77, 126, 0.5)),url("../static/images/Black\ Lamborghni\ Huracan\ 2019.jpg");
+      background-size:cover;
+      border-radius:15px;
+      color:#0f2f55;
+     
+   
+    }
+    
+    .header h1{
+      text-align: center;
+      color:#99cafa;
+    }
+    .header h6{
+      color:#d6a40d;
+      font-family: "Audiowide";
+      margin-left:40px;
+      font-weight:800;
+      font-size:18px;
+      margin-top:10px;
+    }
+    .logo-text{
+      text-align:left;
+      margin-left:40px;
+      font-weight:lighter;
+      font-family:'Montserrat';
+      color:#E2E6EA;
+      font-size:12px;
+    }
+    
+    .header span{
+      color:#d6a40d;
+    }
+    
+    .header-p{
+      color:#E2E6EA;
+      text-align: center;
+      margin-top:5%;
+    }
+    .header h3{
+      color:#E2E6EA;
+      font-size:18px;
+      text-align:center;
+      margin-bottom:30px; 
+    }
+    .header a{
+      padding:20px 100px;
+     
+      background:#f3b805;
+      color:#0f2f55;
+      margin:auto;
+      text-decoration: none;;
+      margin-left:40%;
+      
+   
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: all 0.3s;
+      
+    }
+    .header a:hover{
+      transform: translateY(-3px);
+      
+      box-shadow: 0 5px 15px rgba(230, 174, 8, 0.3);
+      background:#d6a40d;
+    }
+    .main_container{
+      width:100%;
+    
+      margin:auto;
+      padding-top:30px;
+      background:#f5f7f8;
+     
+      top:95%;
+      
+      text-align:center;
+      
+      border-radius:20px;
+    
+    }
+    .main_container h2{
+      color:#0f2f55;
+      margin-bottom:20px;
+    }
+    .flex-holder{
+      display:flex;
+      flex-direction:row;
+      justify-content: center;
+      width:95%;
+      
+    }
+    .description{
+      width:50%;
+     
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      justify-content:space-between;
+      padding:30px 10px;
+      background-size:cover;
+      margin-left:10px;
+    }
+   
+    .how_it_works{
+      width:80%;
+      padding:20px 10px;
+      text-align:left;
+      height:33%;
+      border-radius:9px;
+      margin:auto;
+      border:1px solid #99cafa;
+      background:#dfecf8
+    }
+    .how_it_works2{
+      background:#bed3f0;
+   
+    }
+    .how_it_works3{
+      background:#eaedf0;
+    }
+    .how_it_works:hover{
+      background:#f5f7f8;
+    }
+    .how_it_works h3{
+      font-size:18px;
+      display:inline;
+      margin-left:10px;
+    }
+    .how_it_works p{
+      margin-left:2px;
+      margin-top:15px;
+    }
+    li{
+      list-style: none;
+      font-size:16px;
+   
+   
+      
+    }
+    svg{
+      color:#f3b805;
+      margin-left:25%;
+      display:inline;
+      
+    }
+    .globe{
+      margin-left:0;
+    }
+   
+   footer{
+    width:100%;
+    height:10%;
+    background:#E2E6EA;
+    margin-top:25px;
+   }
+   footer p{
+    text-align:center;
+    color:#0f2f55;
+   }
+   footer span{
+    color:#d6a40d;
+   }
+  
+   
+    @media (max-width: 768px) {
+  .flex-holder {
+    flex-direction: column;
+  }
+  .form-container, .description {
+    width: 100%;
+    margin-left: 0;
+  }
+  .header a{
+    padding:15px 50px;
+    margin-left:30%;
+  }
+  .header h3{
+    font-size:18px;
+  }
+  .header-p{
+    margin-top:10%;
+  }
+}
+
+@media(max-width: 500px)
+{
+  .logo-text{
+    font-size:14px;
+  }
+  .header a{
+    margin-left:30%
+  }
+  .header h6{
+    font-size:18px;
+  }
+  .form-group input{
+        font-size:16px;
+  }
+}
+
+@media(max-width: 400px)
+{
+  .logo-text{
+    font-size:14px;
+  }
+  .header a{
+    margin-left:20%;
+  }
+  .header h6{
+    font-size:14px;
+  
+  
+  }
+  .header h3{
+    font-size:18px;
+  }
+  .header h1{
+    font-size:20px;
+  }
+  .header-p{
+    font-size:14px;
+    margin-top:20%;
+    
+  }
+  .form-group input{
+    font-size:16px;
+  }
+  button{
+   
+    font-size:14px;
+  }
+}
+  </style>
 </head>
 <body>
-<!... I want a ui that will that has form of 10 inputs and a predict button that when clicked will display a prediction ...
-The label for the inputs will be the columns in my dataframe.And you can see them inside the schema.yaml file.The prediction result after pressing the predict button would be 
-the the last (target column ) inside the schema.yaml file>
+  
+  <section class="header">
+
+      <h6>PRICEPULSE</h6>
+      <p class="logo-text">AI-powered valuations</p>
+      <p class="header-p"><i>Precision Pricing for Your Perfect Ride</p></i>
+      <h1>Discover Your Car's True Value!</h1>
+      <h3>AI-powered price analysis in seconds • Trusted by 10,000+ car owners</h3>
+      <a href="#main">Estimate Now!</a>
+  </section>
+
+
+    <section class="main_container" id="main">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-globe2 globe" viewBox="0 0 16 16">
+        <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855q-.215.403-.395.872c.705.157 1.472.257 2.282.287zM4.249 3.539q.214-.577.481-1.078a7 7 0 0 1 .597-.933A7 7 0 0 0 3.051 3.05q.544.277 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9 9 0 0 1-1.565-.667A6.96 6.96 0 0 0 1.018 7.5zm1.4-2.741a12.3 12.3 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332M8.5 5.09V7.5h2.99a12.3 12.3 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.6 13.6 0 0 1 7.5 10.91V8.5zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741zm-3.282 3.696q.18.469.395.872c.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a7 7 0 0 1-.598-.933 9 9 0 0 1-.481-1.079 8.4 8.4 0 0 0-1.198.49 7 7 0 0 0 2.276 1.522zm-1.383-2.964A13.4 13.4 0 0 1 3.508 8.5h-2.49a6.96 6.96 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667m6.728 2.964a7 7 0 0 0 2.275-1.521 8.4 8.4 0 0 0-1.197-.49 9 9 0 0 1-.481 1.078 7 7 0 0 1-.597.933M8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855q.216-.403.395-.872A12.6 12.6 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.96 6.96 0 0 0 14.982 8.5h-2.49a13.4 13.4 0 0 1-.437 3.008M14.982 7.5a6.96 6.96 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008zM11.27 2.461q.266.502.482 1.078a8.4 8.4 0 0 0 1.196-.49 7 7 0 0 0-2.275-1.52c.218.283.418.597.597.932m-.488 1.343a8 8 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+      </svg><h2>Discover</h2>
+      <div class="flex-holder">
+
+      <div class="description">
+        <div class="how_it_works">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+          </svg><h3>Enter Trip Details</h3>
+          <p>Fill in precise metrics like distance traveled, time of day, passenger count, and traffic conditions. Our form intelligently validates inputs to ensure data accuracy.</p>
+        </div>
+       <div class="how_it_works how_it_works2"> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-calculator" viewBox="0 0 16 16">
+          <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+          <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+        </svg><h3>AI Analysis</h3>
+        <p>Our machine learning model cross-references your inputs with thousands of data points</p></div>
+        
+       <div class="how_it_works how_it_works3">  
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0"/>
+          <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z"/>
+          <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z"/>
+          <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567"/>
+        </svg><h3>Get Your Quote</h3>
+        <p>Receive a comprehensive price breakdown with:
+
+            
+            <li><i>Base fare + distance calculation</i></li>
+            <li><i>Demand-based adjustments</i></li>
+         
+          
+           
+      </div>
+      </div>
+
+   
+    <div class="form-container">
+
+      <h3>Car Price Estimation</h3>
+    
+    <form id="prediction-form" action="/predict" method="POST">
+      <!-- Trip Distance (km) -->
+      <div class="form-group">
+        
+        <input type="number" id="trip-distance" name="Trip_Distance_km" placeholder="Enter Trip Distance (km)" step="0.01" min="0" required>
+      </div>
+
+      <!-- Time of Day -->
+      <div class="form-group">
+        
+        <select id="time-of-day" name="Time_of_Day" required>
+          <option value="">Select Time of Day</option>
+          <option value="Morning">Morning</option>
+          <option value="Afternoon">Afternoon</option>
+          <option value="Evening">Evening</option>
+        </select>
+      </div>
+
+      <!-- Day of Week -->
+      <div class="form-group"> 
+        <select id="day-of-week" name="Day_of_Week" required>
+          <option value="">Select Day of Week</option>
+          <option value="Weekday">Weekday</option>
+          <option value="Weekend">Weekend</option>
+        </select>
+      </div>
+
+      <!-- Passenger Count -->
+      <div class="form-group">
+        
+        <input type="number" id="passenger-count" name="Passenger_Count" placeholder="Enter Passenger Count" min="1" max="4" required>
+      </div>
+
+      <!-- Traffic Conditions -->
+      <div class="form-group">
+        
+        <select id="traffic-conditions" name="Traffic_Conditions" required>
+          <option value="">Select Traffic Conditions</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+
+      <!-- Weather -->
+      <div class="form-group">
+        
+        <select id="weather"  name="Weather" required>
+          <option value="">Select Weather</option>
+          <option value="Clear">Clear</option>
+          <option value="Rain">Rain</option>
+        </select>
+      </div>
+
+      <!-- Base Fare -->
+      <div class="form-group">
+        
+        <input type="number" id="base-fare" name="Base_Fare" placeholder="Enter Base Fare" step="0.01" min="0" required>
+      </div>
+
+      <!-- Per Km Rate -->
+      <div class="form-group">
+        
+        <input type="number" id="per-km-rate" name="Per_Km_Rate"  placeholder="Enter Per Km Rate" step="0.01" min="0" required>
+      </div>
+
+      <!-- Per Minute Rate -->
+      <div class="form-group">
+        
+        <input type="number" id="per-minute-rate" name="Per_Minute_Rate"  placeholder="Enter Per Minute Rate" step="0.01" min="0" required>
+      </div>
+
+      <!-- Trip Duration (Minutes) -->
+      <div class="form-group">
+        
+        <input type="number" id="trip-duration" name="Trip_Duration_Minutes"  placeholder="Enter Trip Duration (Minutes)" step="0.01" min="0" required>
+      </div>
+
+      <!-- Predict Button -->
+      <button type="submit" id="predict-button">Predict Trip Price</button>
+    </form>
+    
+  </div>
+</div>
+</section>
+<footer>
+  <p>&copy; 2025 <span>PRICEPULSE</span>. All rights reserved.</p>
+ 
+</footer>
+
+
+
+<script>
+  // Form submission handler
+document.getElementById('prediction-form').addEventListener('submit', function(){
+ 
+ console.log("Prediction triggered");
+ 
+ const btn = document.getElementById('predict-button');
+ btn.disabled = true;
+ btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Calculating...';
+
+
+ 
+});
+  </script>
+
 </body>
 </html>
  
