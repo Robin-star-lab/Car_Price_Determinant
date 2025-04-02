@@ -10,7 +10,10 @@ import pandas as pd
 from logger import my_logger
 import numpy as np
 import json
-from src.Car_Price_Pred.utils.common import save_json
+import joblib
+from sklearn.utils.validation import check_is_fitted
+
+
 
 
 
@@ -36,8 +39,8 @@ class DataTransformation():
           transformers = [
              ('categorical_pipeline', Pipeline([
                  ('imputer', SimpleImputer(strategy='most_frequent')),
-                 ('encoder', OrdinalEncoder()),
-                ('scaler', StandardScaler())
+                 ('encoder', OrdinalEncoder(handle_unknown='use_encoded_value', unknown_value=-1)),
+                ('scaler', StandardScaler(with_mean=False))
                  ]), categorical_columns)])
 
         transformer_numerical = ColumnTransformer(
@@ -50,11 +53,26 @@ class DataTransformation():
         
         preprocessor = ColumnTransformer([
              ('categorical', transformer_categorical, categorical_columns),
-             ('numerical', transformer_numerical, numerical_columns)])
-        save_json(preprocessor,os.path.join(self.config.preprocessor_path,'preprocessor.pkl'))
-
+             ('numerical', transformer_numerical, numerical_columns)],
+                                         remainder='passthrough')
         
-        scaled_x_train = preprocessor.fit_transform(x_train)
+        os.makedirs(self.config.preprocessor_path, exist_ok=True)
+        
+        preprocessor.fit(x_train)
+        
+
+        # Verify it's fitted
+        try:
+            
+            check_is_fitted(preprocessor)
+            my_logger.info("Preprocessor is properly fitted")
+        except Exception as e:
+            my_logger.info(f"Preprocessor is not fitted: {e}")
+            # Handle the error
+
+        joblib.dump(preprocessor,"artifacts/data_transformation/preprocessor.pkl")
+        
+        scaled_x_train = preprocessor.transform(x_train)
         scaled_x_test = preprocessor.transform(x_test)
         
         scaled_train_df = pd.DataFrame(scaled_x_train,columns = preprocessor.get_feature_names_out())
@@ -68,3 +86,6 @@ class DataTransformation():
         
         scaled_train.to_csv(os.path.join(folder_path,'train_data.csv'),index=False)
         scaled_test.to_csv(os.path.join(folder_path,'test_data.csv'),index=False)
+        
+        
+

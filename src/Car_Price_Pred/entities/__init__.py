@@ -67,10 +67,6 @@ class ModelEvaluationConfig():
     svm: str
     random_forest: str
     
-@dataclass
-class PredictionConfig():
-    root_url: Path
-    prediction_model: str
-    preprocessor: str
+
     
     

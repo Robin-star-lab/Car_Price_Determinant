@@ -66,12 +66,3 @@ def save_best_model(model, filepath):
 def save_scores(scores, filepath):
     with open(filepath, 'w') as score_file:
         score_file.write(f"{scores}/n")
-@ensure_annotations
-def save_json(preprocessor, filepath):
-    with open(filepath, 'wb') as pickle_obj:
-        pickle.dump(preprocessor,pickle_obj)
-        
-def load_json(filepath):
-    with open(filepath, 'rb') as pickle_obj:
-        preprocessor = pickle.load(pickle_obj)
-        return preprocessor

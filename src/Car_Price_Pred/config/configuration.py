@@ -3,7 +3,7 @@ import yaml
 from src.Car_Price_Pred.utils.common import read_yaml,create_directories
 from src.Car_Price_Pred.entities import DataIngestionConfig,DataEvaluationConfig,DataTransformationConfig,ModelTrainingConfig,ModelEvaluationConfig
 from logger import my_logger
-from src.Car_Price_Pred.entities import PredictionConfig
+
 
 
 class ConfigurationManager:
@@ -160,7 +160,7 @@ class ModelEvaluationConfigurationManager:
     
     
     
-class PredictionConfigurationManager():
+"""class PredictionConfigurationManager():
     def __init__(self,config_file_path = CONFIG_FILE_PATH):
         self.config = read_yaml(config_file_path)
         
@@ -176,5 +176,5 @@ class PredictionConfigurationManager():
         )
         
         
-        return prediction_config
+        return prediction_config"""
     

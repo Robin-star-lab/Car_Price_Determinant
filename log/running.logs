@@ -1258,3 +1258,1727 @@
 [ 2025-03-31 18:10:40,145 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 18:10:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
 [ 2025-03-31 18:12:28,110 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 18:12:28] "GET / HTTP/1.1" 200 - ]
 [ 2025-03-31 18:12:28,489 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 18:12:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 18:43:47,378 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 18:43:47,396 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 18:47:00,652 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 18:47:00,652 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 18:51:25,659 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 18:51:25,660 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 18:57:18,925 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 18:57:18,926 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 18:59:59,278 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 18:59:59,279 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 19:00:03,147 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:00:03] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 19:00:03,377 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:00:03] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 19:00:03,909 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:00:03] "GET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1" 200 - ]
+[ 2025-03-31 19:00:04,716 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:00:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 19:01:09,300 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 19, in predict
+    Trip_Distance_km = float(request.form.get(['Trip_Distance_km']))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\datastructures\structures.py", line 106, in get
+    rv = self[key]
+         ~~~~^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\datastructures\structures.py", line 234, in __getitem__
+    if key in self:
+       ^^^^^^^^^^^
+TypeError: unhashable type: 'list'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    raise CustomException(e,sys)
+Exceptions.CustomException: Error occured in python script no [unhashable type: 'list'] line number [19] error message [C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py]
+[ 2025-03-31 19:01:09,475 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:01:09] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 19:10:37,389 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 19:10:37,391 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 19:10:43,099 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:10:43] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 19:10:43,507 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:10:43] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 19:10:47,199 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:10:47] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 19:10:47,453 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:10:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 19:11:27,977 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 34, in predict
+    obj = Prediction()
+          ^^^^^^^^^^^^
+TypeError: Prediction.__init__() missing 1 required positional argument: 'config'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    raise CustomException(e,sys)
+Exceptions.CustomException: Error occured in python script no [Prediction.__init__() missing 1 required positional argument: 'config'] line number [34] error message [C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py]
+[ 2025-03-31 19:11:28,015 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:11:28] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 19:47:10,326 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 19:47:10,328 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 19:47:45,770 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:47:45] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 19:47:46,168 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:47:46] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 19:47:47,039 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:47:47] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 19:48:30,165 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 19, in predict
+    Trip_Distance_km = float(request.form.get(['Trip_Distance_km']))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\datastructures\structures.py", line 106, in get
+    rv = self[key]
+         ~~~~^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\datastructures\structures.py", line 234, in __getitem__
+    if key in self:
+       ^^^^^^^^^^^
+TypeError: unhashable type: 'list'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 39, in predict
+    raise CustomException(e,sys)
+Exceptions.CustomException: Error occured in python script no [unhashable type: 'list'] line number [19] error message [C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py]
+[ 2025-03-31 19:48:30,304 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:48:30] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 19:51:20,378 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 19:51:20,379 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 19:51:27,310 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:51:27] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 19:51:27,350 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:51:27] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 19:51:27,669 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:51:27] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 19:52:05,385 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 30, in predict
+    data = CustomData()
+           ^^^^^^^^^^^^
+TypeError: CustomData.__init__() missing 10 required positional arguments: 'Trip_Distance_km', 'Time_of_Day', 'Day_of_Week', 'Passenger_Count', 'Traffic_Conditions', 'Weather', 'Base_Fare', 'Per_Km_Rate', 'Per_Minute_Rate', and 'Trip_Duration_Minutes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 39, in predict
+    raise CustomException(e,sys)
+Exceptions.CustomException: Error occured in python script no [CustomData.__init__() missing 10 required positional arguments: 'Trip_Distance_km', 'Time_of_Day', 'Day_of_Week', 'Passenger_Count', 'Traffic_Conditions', 'Weather', 'Base_Fare', 'Per_Km_Rate', 'Per_Minute_Rate', and 'Trip_Duration_Minutes'] line number [30] error message [C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py]
+[ 2025-03-31 19:52:05,400 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:52:05] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 19:56:31,781 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 19:56:31,782 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 19:56:43,178 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:56:43] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 19:56:43,545 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:56:43] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 19:56:43,766 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:56:43] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 19:57:17,091 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 19, in predict
+    Trip_Distance_km = float(request.form.get(['Trip_Distance_km']))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\datastructures\structures.py", line 106, in get
+    rv = self[key]
+         ~~~~^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\datastructures\structures.py", line 234, in __getitem__
+    if key in self:
+       ^^^^^^^^^^^
+TypeError: unhashable type: 'list'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 39, in predict
+    raise CustomException(e,sys)
+Exceptions.CustomException: Error occured in python script no [unhashable type: 'list'] line number [19] error message [C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py]
+[ 2025-03-31 19:57:17,111 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 19:57:17] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 20:00:20,165 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 20:00:20,166 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 20:00:25,318 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:00:25] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 20:00:25,477 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:00:25] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 20:00:25,947 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:00:25] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 20:00:58,229 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 20, in predict
+    Time_of_Day = str(request.form.get(['Time_of_Day']))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\datastructures\structures.py", line 106, in get
+    rv = self[key]
+         ~~~~^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\datastructures\structures.py", line 234, in __getitem__
+    if key in self:
+       ^^^^^^^^^^^
+TypeError: unhashable type: 'list'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 39, in predict
+    raise CustomException(e,sys)
+Exceptions.CustomException: Error occured in python script no [unhashable type: 'list'] line number [20] error message [C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py]
+[ 2025-03-31 20:00:58,247 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:00:58] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 20:03:58,335 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 20:03:58,336 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 20:05:17,684 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 20:05:17,685 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 20:05:21,116 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:05:21] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 20:05:21,282 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:05:21] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 20:05:21,619 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:05:21] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 20:05:52,151 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 19, in predict
+    Trip_Distance_km = float(request.form.get(['Trip_Distance_km']))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\datastructures\structures.py", line 106, in get
+    rv = self[key]
+         ~~~~^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\datastructures\structures.py", line 234, in __getitem__
+    if key in self:
+       ^^^^^^^^^^^
+TypeError: unhashable type: 'list'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 39, in predict
+    raise CustomException(e,sys)
+Exceptions.CustomException: Error occured in python script no [unhashable type: 'list'] line number [19] error message [C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py]
+[ 2025-03-31 20:05:52,170 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:05:52] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 20:10:41,007 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 20:10:41,008 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 20:10:50,615 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:10:50] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 20:10:50,842 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:10:50] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 20:10:51,147 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:10:51] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 20:10:51,583 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:10:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 20:11:31,238 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 30, in predict
+    data = CustomData()
+           ^^^^^^^^^^^^
+TypeError: CustomData.__init__() missing 10 required positional arguments: 'Trip_Distance_km', 'Time_of_Day', 'Day_of_Week', 'Passenger_Count', 'Traffic_Conditions', 'Weather', 'Base_Fare', 'Per_Km_Rate', 'Per_Minute_Rate', and 'Trip_Duration_Minutes'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 39, in predict
+    raise CustomException(e,sys)
+Exceptions.CustomException: Error occured in python script no [CustomData.__init__() missing 10 required positional arguments: 'Trip_Distance_km', 'Time_of_Day', 'Day_of_Week', 'Passenger_Count', 'Traffic_Conditions', 'Weather', 'Base_Fare', 'Per_Km_Rate', 'Per_Minute_Rate', and 'Trip_Duration_Minutes'] line number [30] error message [C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py]
+[ 2025-03-31 20:11:31,269 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:11:31] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 20:22:20,974 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 20:22:20,978 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 20:22:24,717 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:22:24] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 20:22:24,861 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:22:24] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 20:22:25,082 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:22:25] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 20:23:06,429 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 47, in predict
+    obj = Prediction()
+          ^^^^^^^^^^^^
+TypeError: Prediction.__init__() missing 1 required positional argument: 'config'
+[ 2025-03-31 20:23:06,535 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:23:06] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 20:36:08,237 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 20:36:08,237 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 20:36:29,574 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:36:29] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 20:36:29,786 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:36:29] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 20:36:29,945 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:36:29] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 20:37:02,175 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 47, in predict
+    obj = Prediction()
+          ^^^^^^^^^^^^
+TypeError: Prediction.__init__() missing 2 required positional arguments: 'model' and 'preprocessor'
+[ 2025-03-31 20:37:02,251 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:37:02] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 20:45:19,676 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 20:45:19,686 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 20:46:08,538 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:46:08] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 20:46:08,846 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:46:08] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 20:46:09,213 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:46:09] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 20:46:09,261 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:46:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 20:47:22,482 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 50, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1059, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-03-31 20:47:22,841 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:47:22] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 20:53:08,610 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 20:53:08,611 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 20:53:18,422 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:53:18] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 20:53:18,584 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:53:18] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 20:53:18,833 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:53:18] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 20:54:08,732 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 50, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1059, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-03-31 20:54:08,742 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 20:54:08] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 21:00:13,329 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 21:00:13,335 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 21:00:27,138 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:00:27] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 21:00:27,491 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:00:27] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 21:00:27,754 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:00:27] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 21:01:23,341 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 50, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1059, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-03-31 21:01:23,401 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:01:23] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 21:13:41,220 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 21:13:41,221 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 21:13:53,274 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:13:53] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 21:13:53,558 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:13:53] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 21:13:53,707 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:13:53] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 21:14:45,392 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 50, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1059, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-03-31 21:14:45,431 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:14:45] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 21:21:24,435 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 21:21:24,436 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 21:21:36,553 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:21:36] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 21:21:36,708 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:21:36] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 21:21:36,871 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:21:36] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 21:22:25,945 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 50, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1059, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-03-31 21:22:25,957 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:22:25] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 21:27:56,611 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 21:27:56,612 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 21:29:06,955 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:29:06] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 21:29:07,064 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:29:07] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 21:29:09,475 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:29:09] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 21:29:50,755 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 50, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1059, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-03-31 21:29:50,771 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:29:50] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 21:36:16,700 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 21:36:16,701 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 21:36:24,045 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:36:24] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 21:36:24,146 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:36:24] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 21:36:24,427 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:36:24] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 21:37:06,416 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 50, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1059, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-03-31 21:37:06,428 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:37:06] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 21:44:15,687 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 21:44:15,687 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 21:47:07,873 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:47:07] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 21:47:08,039 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:47:08] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 21:47:10,912 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:47:10] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 21:47:48,448 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 50, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1059, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-03-31 21:47:48,457 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 21:47:48] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-03-31 22:02:53,642 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-03-31 22:02:53,643 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-03-31 22:03:35,512 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 22:03:35] "GET / HTTP/1.1" 200 - ]
+[ 2025-03-31 22:03:35,822 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 22:03:35] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 22:03:36,163 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 22:03:36] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-03-31 22:03:36,402 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 22:03:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-03-31 22:04:53,107 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 50, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1059, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-03-31 22:04:53,170 : _internal : INFO : 127.0.0.1 - - [31/Mar/2025 22:04:53] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-01 02:50:00,876 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-04-01 02:50:00,877 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-01 02:50:11,132 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 02:50:11] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-01 02:50:14,665 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 02:50:14] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-01 02:50:16,308 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 02:50:16] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-01 02:51:14,832 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 50, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1059, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-01 02:51:14,937 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 02:51:14] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-01 03:09:20,535 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-04-01 03:09:20,536 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-01 03:10:02,280 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:10:02] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-01 03:10:03,150 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:10:03] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-01 03:10:09,243 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:10:09] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-01 03:10:11,045 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:10:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-04-01 03:11:57,745 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1060, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-01 03:11:58,113 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:11:58] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-01 03:16:23,667 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-04-01 03:16:23,668 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-01 03:16:59,981 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:16:59] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-01 03:17:00,631 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:17:00] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-01 03:17:02,833 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:17:02] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-01 03:17:59,141 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1060, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-01 03:17:59,215 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:17:59] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-01 03:30:22,575 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-04-01 03:30:22,576 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-01 03:30:30,998 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:30:30] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-01 03:30:33,791 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:30:33] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-01 03:30:34,249 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:30:34] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-01 03:31:33,060 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1060, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-01 03:31:33,148 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:31:33] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-01 03:34:07,532 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-04-01 03:34:07,534 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-01 03:34:38,107 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:34:38] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-01 03:34:38,184 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:34:38] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-01 03:34:38,387 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:34:38] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-01 03:35:34,800 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1060, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-01 03:35:34,879 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 03:35:34] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-01 08:31:20,722 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-04-01 08:31:20,786 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-01 08:31:27,240 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 08:31:27] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-01 08:31:27,872 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 08:31:27] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-01 08:31:29,002 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 08:31:29] "GET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1" 200 - ]
+[ 2025-04-01 08:31:29,022 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 08:31:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-04-01 08:33:03,005 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1059, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-01 08:33:03,126 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 08:33:03] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-01 09:15:20,632 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-04-01 09:15:20,681 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-01 09:15:28,832 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 09:15:28] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-01 09:15:29,040 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 09:15:29] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-01 09:15:30,247 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 09:15:30] "GET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1" 200 - ]
+[ 2025-04-01 09:15:30,272 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 09:15:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-04-01 09:16:44,972 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1059, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-01 09:16:45,127 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 09:16:45] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-01 09:32:55,339 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-04-01 09:32:55,340 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-01 09:33:42,747 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-04-01 09:33:42,749 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-01 09:33:48,430 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 09:33:48] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-01 09:33:48,720 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 09:33:48] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-01 09:33:49,066 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 09:33:49] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-01 09:33:49,196 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 09:33:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-04-01 09:35:12,911 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1060, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-01 09:35:13,096 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 09:35:13] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-01 09:42:36,307 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.68:8080 ]
+[ 2025-04-01 09:42:36,308 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-01 09:43:29,106 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 09:43:29] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-01 09:43:29,770 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 09:43:29] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-01 09:43:30,530 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 09:43:30] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-01 09:44:28,065 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1060, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-01 09:44:28,124 : _internal : INFO : 127.0.0.1 - - [01/Apr/2025 09:44:28] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-02 10:23:35,245 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.52:8080 ]
+[ 2025-04-02 10:23:35,247 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-02 10:24:14,751 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 10:24:14] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-02 10:24:15,031 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 10:24:15] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 10:24:17,446 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 10:24:17] "GET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1" 200 - ]
+[ 2025-04-02 10:24:17,498 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 10:24:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 10:25:22,975 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1059, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\Car_price\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-02 10:25:23,174 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 10:25:23] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-02 15:39:38,650 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.52:8080 ]
+[ 2025-04-02 15:39:38,651 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-02 15:39:46,634 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 15:39:46] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-02 15:39:46,791 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 15:39:46] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 15:39:47,112 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 15:39:47] "GET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1" 200 - ]
+[ 2025-04-02 15:39:47,240 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 15:39:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 15:41:02,303 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1060, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-02 15:41:02,521 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 15:41:02] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-02 15:45:03,168 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.52:8080 ]
+[ 2025-04-02 15:45:03,169 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-02 15:45:10,102 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 15:45:10] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-02 15:45:10,421 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 15:45:10] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 15:45:10,619 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 15:45:10] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-02 15:46:01,451 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1060, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-02 15:46:01,476 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 15:46:01] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-02 15:49:33,987 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.52:8080 ]
+[ 2025-04-02 15:49:33,988 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-02 15:49:38,011 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 15:49:38] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-02 15:49:38,159 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 15:49:38] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 15:49:38,346 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 15:49:38] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-02 15:50:13,332 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1060, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-02 15:50:13,415 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 15:50:13] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-02 16:01:36,682 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.52:8080 ]
+[ 2025-04-02 16:01:36,683 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-02 16:01:44,851 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:01:44] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-02 16:01:44,934 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:01:44] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 16:01:45,283 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:01:45] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-02 16:02:34,376 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 13, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1060, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-02 16:02:34,405 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:02:34] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-02 16:20:23,305 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.52:8080 ]
+[ 2025-04-02 16:20:23,306 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-02 16:20:59,213 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:20:59] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-02 16:20:59,381 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:20:59] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 16:21:01,869 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:21:01] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-02 16:21:37,426 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 14, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1060, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-02 16:21:37,492 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:21:37] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-02 16:46:58,327 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.52:8080 ]
+[ 2025-04-02 16:46:58,329 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-02 16:47:04,522 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:47:04] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-02 16:47:04,600 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:47:04] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 16:47:04,810 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:47:04] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-02 16:47:43,825 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 14, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1060, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-02 16:47:43,842 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:47:43] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-02 16:53:40,408 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.52:8080 ]
+[ 2025-04-02 16:53:40,410 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-02 16:53:47,799 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:53:47] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-02 16:53:47,922 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:53:47] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 16:53:48,218 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:53:48] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-02 16:54:25,399 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 14, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1060, in transform
+    check_is_fitted(self)
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\validation.py", line 1757, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This ColumnTransformer instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+[ 2025-04-02 16:54:25,419 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 16:54:25] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-02 17:01:39,168 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:01:39,169 : common : INFO : Creates directory for path;artifacts/data_ingestion in file paths :['artifacts/data_ingestion'] ]
+[ 2025-04-02 17:01:39,307 : data_ingestion : INFO : Extracted the zipfile: artifacts/data_ingestion/data.zip into: artifacts/data_ingestion ]
+[ 2025-04-02 17:01:39,307 : main : INFO : Stage : ===========Data Ingestion Stage=======successfully implimented ]
+[ 2025-04-02 17:01:39,329 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:01:39,330 : common : INFO : Creates directory for path;artifacts/data_ingestion in file paths :['artifacts/data_ingestion'] ]
+[ 2025-04-02 17:01:39,522 : main : INFO : Stage : ===========Data Evaluation Stage=======successfully implimented ]
+[ 2025-04-02 17:01:39,528 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:01:39,528 : common : INFO : Creates directory for path;artifacts/data_transformation in file paths :['artifacts/data_transformation'] ]
+[ 2025-04-02 17:01:39,832 : data_transformation : INFO : Preprocessor is properly fitted ]
+[ 2025-04-02 17:01:39,988 : main : INFO : Stage : ===========Data Transformation Stage=======Successfully implimented ]
+[ 2025-04-02 17:01:39,994 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:01:39,995 : common : INFO : Creates directory for path;artifacts/model_training in file paths :['artifacts/model_training'] ]
+[ 2025-04-02 17:01:40,342 : model_training : INFO : Best Model is LinearRegression(n_jobs=1) with scores : 0.7778757024516244 ]
+[ 2025-04-02 17:01:40,528 : model_training : INFO : Best Model is LinearRegression(n_jobs=1) with scores : 0.7778757024516244 ]
+[ 2025-04-02 17:01:41,101 : model_training : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8819239000057446 ]
+[ 2025-04-02 17:01:41,349 : model_training : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8819239000057446 ]
+[ 2025-04-02 17:01:41,441 : model_training : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8819239000057446 ]
+[ 2025-04-02 17:01:41,546 : model_training : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8819239000057446 ]
+[ 2025-04-02 17:01:41,680 : model_training : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8819239000057446 ]
+[ 2025-04-02 17:01:41,681 : main : INFO : Stage : ===========Model Training Stage=======Successfully implimented ]
+[ 2025-04-02 17:01:41,689 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:01:41,690 : common : INFO : Creates directory for path;artifacts/model_evaluation in file paths :['artifacts/model_evaluation'] ]
+[ 2025-04-02 17:02:11,286 : model_evaluation : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8472906308772307 ]
+[ 2025-04-02 17:02:11,290 : main : INFO : Stage : ===========Model Evaluation Stage=======Successfully implimented ]
+[ 2025-04-02 17:03:45,625 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.52:8080 ]
+[ 2025-04-02 17:03:45,627 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-02 17:03:53,326 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:03:53] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-02 17:03:53,404 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:03:53] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 17:03:53,602 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:03:53] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-02 17:04:43,792 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 14, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1101, in transform
+    Xs = self._call_func_on_transformers(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 910, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 1863, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 1792, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\pipeline.py", line 1531, in _transform_one
+    res = transformer.transform(X, **params.transform)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1101, in transform
+    Xs = self._call_func_on_transformers(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 910, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 1863, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 1792, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\pipeline.py", line 1531, in _transform_one
+    res = transformer.transform(X, **params.transform)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\pipeline.py", line 1092, in transform
+    Xt = transform.transform(Xt, **routed_params[name].transform)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\preprocessing\_encoders.py", line 1597, in transform
+    X_int, X_mask = self._transform(
+                    ^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\preprocessing\_encoders.py", line 218, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories ['None'] in column 3 during transform
+[ 2025-04-02 17:04:43,974 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:04:43] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-02 17:10:43,689 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.52:8080 ]
+[ 2025-04-02 17:10:43,689 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-02 17:11:10,466 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:11:10] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-02 17:11:10,638 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:11:10] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 17:11:10,887 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:11:10] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-02 17:12:03,941 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 14, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1101, in transform
+    Xs = self._call_func_on_transformers(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 910, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 1863, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 1792, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\pipeline.py", line 1531, in _transform_one
+    res = transformer.transform(X, **params.transform)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1101, in transform
+    Xs = self._call_func_on_transformers(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 910, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 1863, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 1792, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\pipeline.py", line 1531, in _transform_one
+    res = transformer.transform(X, **params.transform)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\pipeline.py", line 1092, in transform
+    Xt = transform.transform(Xt, **routed_params[name].transform)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\preprocessing\_encoders.py", line 1597, in transform
+    X_int, X_mask = self._transform(
+                    ^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\preprocessing\_encoders.py", line 218, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories ['None'] in column 3 during transform
+[ 2025-04-02 17:12:03,971 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:12:03] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-02 17:15:24,171 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.52:8080 ]
+[ 2025-04-02 17:15:24,172 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-02 17:16:16,087 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:16:16] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-02 17:16:16,232 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:16:16] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 17:16:16,436 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:16:16] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-02 17:16:51,821 : app : ERROR : Exception on /predict [POST] ]
+Traceback (most recent call last):
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\app.py", line 40, in predict
+    prediction = obj.predict(data)
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\Desktop\Car_Price_Pred\src\Car_Price_Pred\pipeline\prediction_pipeline.py", line 19, in predict
+    scaled_input_data = self.preprocessor.transform(input_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1101, in transform
+    Xs = self._call_func_on_transformers(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 910, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 1863, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 1792, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\pipeline.py", line 1531, in _transform_one
+    res = transformer.transform(X, **params.transform)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1101, in transform
+    Xs = self._call_func_on_transformers(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\compose\_column_transformer.py", line 910, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 1863, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\parallel.py", line 1792, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\pipeline.py", line 1531, in _transform_one
+    res = transformer.transform(X, **params.transform)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\pipeline.py", line 1092, in transform
+    Xt = transform.transform(Xt, **routed_params[name].transform)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\preprocessing\_encoders.py", line 1597, in transform
+    X_int, X_mask = self._transform(
+                    ^^^^^^^^^^^^^^^^
+  File "C:\Users\Robin Aluma\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\preprocessing\_encoders.py", line 218, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories ['None'] in column 3 during transform
+[ 2025-04-02 17:16:51,863 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:16:51] "[35m[1mPOST /predict HTTP/1.1[0m" 500 - ]
+[ 2025-04-02 17:26:07,028 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:26:07,029 : common : INFO : Creates directory for path;artifacts/data_ingestion in file paths :['artifacts/data_ingestion'] ]
+[ 2025-04-02 17:26:07,034 : data_ingestion : INFO : Extracted the zipfile: artifacts/data_ingestion/data.zip into: artifacts/data_ingestion ]
+[ 2025-04-02 17:26:07,034 : main : INFO : Stage : ===========Data Ingestion Stage=======successfully implimented ]
+[ 2025-04-02 17:26:07,044 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:26:07,044 : common : INFO : Creates directory for path;artifacts/data_ingestion in file paths :['artifacts/data_ingestion'] ]
+[ 2025-04-02 17:26:07,087 : main : INFO : Stage : ===========Data Evaluation Stage=======successfully implimented ]
+[ 2025-04-02 17:26:07,095 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:26:07,098 : common : INFO : Creates directory for path;artifacts/data_transformation in file paths :['artifacts/data_transformation'] ]
+[ 2025-04-02 17:28:14,643 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:28:14,645 : common : INFO : Creates directory for path;artifacts/data_ingestion in file paths :['artifacts/data_ingestion'] ]
+[ 2025-04-02 17:28:14,650 : data_ingestion : INFO : Extracted the zipfile: artifacts/data_ingestion/data.zip into: artifacts/data_ingestion ]
+[ 2025-04-02 17:28:14,650 : main : INFO : Stage : ===========Data Ingestion Stage=======successfully implimented ]
+[ 2025-04-02 17:28:14,676 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:28:14,678 : common : INFO : Creates directory for path;artifacts/data_ingestion in file paths :['artifacts/data_ingestion'] ]
+[ 2025-04-02 17:28:14,736 : main : INFO : Stage : ===========Data Evaluation Stage=======successfully implimented ]
+[ 2025-04-02 17:28:14,748 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:28:14,749 : common : INFO : Creates directory for path;artifacts/data_transformation in file paths :['artifacts/data_transformation'] ]
+[ 2025-04-02 17:29:37,218 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:29:37,219 : common : INFO : Creates directory for path;artifacts/data_ingestion in file paths :['artifacts/data_ingestion'] ]
+[ 2025-04-02 17:29:37,224 : data_ingestion : INFO : Extracted the zipfile: artifacts/data_ingestion/data.zip into: artifacts/data_ingestion ]
+[ 2025-04-02 17:29:37,225 : main : INFO : Stage : ===========Data Ingestion Stage=======successfully implimented ]
+[ 2025-04-02 17:29:37,236 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:29:37,236 : common : INFO : Creates directory for path;artifacts/data_ingestion in file paths :['artifacts/data_ingestion'] ]
+[ 2025-04-02 17:29:37,278 : main : INFO : Stage : ===========Data Evaluation Stage=======successfully implimented ]
+[ 2025-04-02 17:29:37,285 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:29:37,288 : common : INFO : Creates directory for path;artifacts/data_transformation in file paths :['artifacts/data_transformation'] ]
+[ 2025-04-02 17:34:05,292 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:34:05,293 : common : INFO : Creates directory for path;artifacts/data_ingestion in file paths :['artifacts/data_ingestion'] ]
+[ 2025-04-02 17:34:05,297 : data_ingestion : INFO : Extracted the zipfile: artifacts/data_ingestion/data.zip into: artifacts/data_ingestion ]
+[ 2025-04-02 17:34:05,298 : main : INFO : Stage : ===========Data Ingestion Stage=======successfully implimented ]
+[ 2025-04-02 17:34:05,306 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:34:05,307 : common : INFO : Creates directory for path;artifacts/data_ingestion in file paths :['artifacts/data_ingestion'] ]
+[ 2025-04-02 17:34:05,345 : main : INFO : Stage : ===========Data Evaluation Stage=======successfully implimented ]
+[ 2025-04-02 17:34:05,353 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:34:05,354 : common : INFO : Creates directory for path;artifacts/data_transformation in file paths :['artifacts/data_transformation'] ]
+[ 2025-04-02 17:34:05,404 : data_transformation : INFO : Preprocessor is properly fitted ]
+[ 2025-04-02 17:34:05,471 : main : INFO : Stage : ===========Data Transformation Stage=======Successfully implimented ]
+[ 2025-04-02 17:34:05,479 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:34:05,479 : common : INFO : Creates directory for path;artifacts/model_training in file paths :['artifacts/model_training'] ]
+[ 2025-04-02 17:34:05,527 : model_training : INFO : Best Model is LinearRegression(n_jobs=1) with scores : 0.7800497104076357 ]
+[ 2025-04-02 17:34:05,542 : model_training : INFO : Best Model is LinearRegression(n_jobs=1) with scores : 0.7800497104076357 ]
+[ 2025-04-02 17:34:06,205 : model_training : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8854953889250818 ]
+[ 2025-04-02 17:34:06,263 : model_training : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8854953889250818 ]
+[ 2025-04-02 17:34:06,326 : model_training : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8854953889250818 ]
+[ 2025-04-02 17:34:06,415 : model_training : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8854953889250818 ]
+[ 2025-04-02 17:34:06,536 : model_training : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8854953889250818 ]
+[ 2025-04-02 17:34:06,538 : main : INFO : Stage : ===========Model Training Stage=======Successfully implimented ]
+[ 2025-04-02 17:34:06,557 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 17:34:06,559 : common : INFO : Creates directory for path;artifacts/model_evaluation in file paths :['artifacts/model_evaluation'] ]
+[ 2025-04-02 17:34:21,178 : model_evaluation : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8197061540726026 ]
+[ 2025-04-02 17:34:21,183 : main : INFO : Stage : ===========Model Evaluation Stage=======Successfully implimented ]
+[ 2025-04-02 17:34:41,152 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.52:8080 ]
+[ 2025-04-02 17:34:41,154 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-02 17:34:48,230 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:34:48] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-02 17:34:48,381 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:34:48] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 17:34:48,660 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:34:48] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-02 17:35:27,475 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:35:27] "POST /predict HTTP/1.1" 200 - ]
+[ 2025-04-02 17:35:27,496 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:35:27] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 17:36:18,884 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.52:8080 ]
+[ 2025-04-02 17:36:18,885 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-02 17:36:25,455 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:36:25] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-02 17:36:25,588 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:36:25] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 17:36:25,963 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:36:25] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-02 17:36:26,052 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:36:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 17:37:16,368 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:37:16] "POST /predict HTTP/1.1" 200 - ]
+[ 2025-04-02 17:37:16,394 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:37:16] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
