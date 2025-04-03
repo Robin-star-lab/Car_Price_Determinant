@@ -113,34 +113,34 @@
       
       
     <script>
+      console.log("script-loaded")
 
-console.log("script-loaded")
-
-document.getElementById("btn").addEventListener("click", function(){
-    document.getElementById('results-overlay').classList.remove("overlay-hidden");
-
-}
-);
-// Show modal with results
-function showResults(price) {
-  document.getElementById('predicted-price').textContent = price.toFixed(2);
-  document.getElementById('results-overlay').classList.remove("overlay-hidden");
-  
-  
-}
-
-// Close modal
-document.getElementById('close-results').addEventListener('click', () => {
-  console.log("Close button clicked"); 
-  document.getElementById('results-overlay').classList.add("overlay-hidden")
-  window.location.href = 'index.html'; 
-}
-)
-
-
-setTimeout(() => {
-            document.getElementById('results-overlay').classList.add('overlay-hidden');
-        }, 8000);
+      document.getElementById("btn").addEventListener("click", function(){
+          document.getElementById('results-overlay').classList.remove("overlay-hidden");
+      
+      }
+      );
+      // Show modal with results
+      function showResults(price) {
+        document.getElementById('predicted-price').textContent = price.toFixed(2);
+        document.getElementById('results-overlay').classList.remove("overlay-hidden");
+        
+        
+      }
+      
+      // Close modal
+      document.getElementById('close-results').addEventListener('click', () => {
+        console.log("Close button clicked"); 
+        document.getElementById('results-overlay').classList.add("overlay-hidden")
+        window.location.href = 'index.html'; 
+      }
+      )
+      
+      
+      setTimeout(() => {
+                  document.getElementById('results-overlay').classList.add('overlay-hidden');
+              }, 8000);
     </script>
+
 </body>
 </html>

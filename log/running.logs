@@ -2982,3 +2982,157 @@ ValueError: Found unknown categories ['None'] in column 3 during transform
 [ 2025-04-02 17:36:26,052 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:36:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
 [ 2025-04-02 17:37:16,368 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:37:16] "POST /predict HTTP/1.1" 200 - ]
 [ 2025-04-02 17:37:16,394 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 17:37:16] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 20:50:35,307 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 20:50:35,321 : common : INFO : Creates directory for path;artifacts/data_ingestion in file paths :['artifacts/data_ingestion'] ]
+[ 2025-04-02 20:50:35,419 : data_ingestion : INFO : Extracted the zipfile: artifacts/data_ingestion/data.zip into: artifacts/data_ingestion ]
+[ 2025-04-02 20:50:35,419 : main : INFO : Stage : ===========Data Ingestion Stage=======successfully implimented ]
+[ 2025-04-02 20:50:35,431 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 20:50:35,431 : common : INFO : Creates directory for path;artifacts/data_ingestion in file paths :['artifacts/data_ingestion'] ]
+[ 2025-04-02 20:50:35,987 : main : INFO : Stage : ===========Data Evaluation Stage=======successfully implimented ]
+[ 2025-04-02 20:50:35,998 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 20:50:35,999 : common : INFO : Creates directory for path;artifacts/data_transformation in file paths :['artifacts/data_transformation'] ]
+[ 2025-04-02 20:50:36,607 : data_transformation : INFO : Preprocessor is properly fitted ]
+[ 2025-04-02 20:50:36,992 : main : INFO : Stage : ===========Data Transformation Stage=======Successfully implimented ]
+[ 2025-04-02 20:50:37,001 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 20:50:37,001 : common : INFO : Creates directory for path;artifacts/model_training in file paths :['artifacts/model_training'] ]
+[ 2025-04-02 20:50:40,086 : model_training : INFO : Best Model is LinearRegression(n_jobs=1) with scores : 0.7800497104076357 ]
+[ 2025-04-02 20:50:40,702 : model_training : INFO : Best Model is LinearRegression(n_jobs=1) with scores : 0.7800497104076357 ]
+[ 2025-04-02 20:50:41,509 : model_training : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8861666967037268 ]
+[ 2025-04-02 20:50:42,585 : model_training : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8861666967037268 ]
+[ 2025-04-02 20:50:42,983 : model_training : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8861666967037268 ]
+[ 2025-04-02 20:50:43,672 : model_training : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8861666967037268 ]
+[ 2025-04-02 20:50:43,950 : model_training : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8861666967037268 ]
+[ 2025-04-02 20:50:43,952 : main : INFO : Stage : ===========Model Training Stage=======Successfully implimented ]
+[ 2025-04-02 20:50:43,966 : common : INFO : Creates directory for path;artifacts in file paths :['artifacts'] ]
+[ 2025-04-02 20:50:43,967 : common : INFO : Creates directory for path;artifacts/model_evaluation in file paths :['artifacts/model_evaluation'] ]
+[ 2025-04-02 20:52:07,471 : model_evaluation : INFO : Best Model is RandomForestRegressor(max_depth=10) with scores : 0.8219142788728172 ]
+[ 2025-04-02 20:52:07,479 : main : INFO : Stage : ===========Model Evaluation Stage=======Successfully implimented ]
+[ 2025-04-02 20:53:42,595 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.52:8080 ]
+[ 2025-04-02 20:53:42,595 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-02 20:54:06,243 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 20:54:06] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-02 20:54:06,271 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 20:54:06] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 20:54:07,787 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 20:54:07] "GET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1" 200 - ]
+[ 2025-04-02 20:54:08,092 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 20:54:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-04-02 20:55:19,209 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 20:55:19] "POST /predict HTTP/1.1" 200 - ]
+[ 2025-04-02 20:55:19,235 : _internal : INFO : 127.0.0.1 - - [02/Apr/2025 20:55:19] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 12:33:06,495 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.4.93:8080 ]
+[ 2025-04-03 12:33:06,496 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-03 12:33:18,194 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:33:18] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-03 12:33:18,443 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:33:18] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 12:33:20,491 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:33:20] "GET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1" 200 - ]
+[ 2025-04-03 12:33:20,620 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:33:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 12:37:05,643 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:37:05] "POST /predict HTTP/1.1" 200 - ]
+[ 2025-04-03 12:37:05,680 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:37:05] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 12:37:34,546 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:37:34] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 12:40:48,097 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.4.93:8080 ]
+[ 2025-04-03 12:40:48,099 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-03 12:41:15,719 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:41:15] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-03 12:41:15,754 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:41:15] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 12:41:16,054 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:41:16] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-03 12:42:23,963 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:42:23] "POST /predict HTTP/1.1" 200 - ]
+[ 2025-04-03 12:44:43,559 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:44:43] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 12:44:56,612 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:44:56] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-03 12:44:56,679 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:44:56] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 12:44:59,515 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:44:59] "GET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1" 200 - ]
+[ 2025-04-03 12:44:59,695 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:44:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 12:45:43,745 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:45:43] "POST /predict HTTP/1.1" 200 - ]
+[ 2025-04-03 12:46:11,385 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:46:11] "POST /predict HTTP/1.1" 200 - ]
+[ 2025-04-03 12:47:55,301 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:47:55] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 12:51:02,576 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.4.93:8080 ]
+[ 2025-04-03 12:51:02,577 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-03 12:51:14,535 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:51:14] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-03 12:51:14,693 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:51:14] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 12:51:14,938 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:51:14] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-03 12:51:40,986 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:51:40] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-03 12:51:41,025 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:51:41] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 12:51:41,110 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:51:41] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-03 12:51:41,256 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:51:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 12:51:46,893 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:51:46] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 12:52:44,537 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:52:44] "POST /predict HTTP/1.1" 200 - ]
+[ 2025-04-03 12:52:44,610 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 12:52:44] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:21:09,481 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.36:8080 ]
+[ 2025-04-03 13:21:09,494 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-03 13:21:14,995 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:21:14] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-03 13:21:15,068 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:21:15] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:21:15,387 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:21:15] "GET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1" 200 - ]
+[ 2025-04-03 13:22:03,906 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:22:03] "POST /predict HTTP/1.1" 200 - ]
+[ 2025-04-03 13:22:03,928 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:22:03] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:26:38,569 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.36:8080 ]
+[ 2025-04-03 13:26:38,570 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-03 13:26:47,591 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:26:47] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-03 13:26:47,629 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:26:47] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:26:47,908 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:26:47] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-03 13:27:34,726 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:27:34] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-03 13:27:34,781 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:27:34] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:27:34,861 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:27:34] "GET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1" 200 - ]
+[ 2025-04-03 13:28:35,543 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:28:35] "POST /predict HTTP/1.1" 200 - ]
+[ 2025-04-03 13:28:35,579 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:28:35] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:28:44,089 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:28:44] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:43:50,754 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.36:8080 ]
+[ 2025-04-03 13:43:50,765 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-03 13:44:51,764 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.36:8080 ]
+[ 2025-04-03 13:44:51,766 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-03 13:45:00,327 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:45:00] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-03 13:45:00,382 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:45:00] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:45:00,616 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:45:00] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-03 13:45:33,659 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:45:33] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-03 13:45:33,935 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:45:33] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:45:34,440 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:45:34] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-03 13:46:45,078 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:46:45] "POST /predict HTTP/1.1" 200 - ]
+[ 2025-04-03 13:46:45,123 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:46:45] "[33mGET /https-0.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:46:45,125 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:46:45] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:47:18,697 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:47:18] "[33mGET /index.html HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:48:09,547 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.36:8080 ]
+[ 2025-04-03 13:48:09,549 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-03 13:48:13,253 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:48:13] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-03 13:48:13,413 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:48:13] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:48:13,599 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:48:13] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-03 13:49:15,329 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:49:15] "POST /predict HTTP/1.1" 200 - ]
+[ 2025-04-03 13:49:15,373 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:49:15] "[33mGET /https-0.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:49:15,381 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:49:15] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:50:15,803 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:50:15] "POST /predict HTTP/1.1" 200 - ]
+[ 2025-04-03 13:50:15,821 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:50:15] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 13:50:15,827 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 13:50:15] "[33mGET /https-0.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 14:04:45,781 : _internal : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.17.6.36:8080 ]
+[ 2025-04-03 14:04:45,785 : _internal : INFO : [33mPress CTRL+C to quit[0m ]
+[ 2025-04-03 14:04:52,395 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 14:04:52] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-03 14:04:52,547 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 14:04:52] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 14:04:53,931 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 14:04:53] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-03 14:05:17,429 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 14:05:17] "GET / HTTP/1.1" 200 - ]
+[ 2025-04-03 14:05:17,626 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 14:05:17] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 14:05:17,827 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 14:05:17] "[36mGET /static/images/Black%20Lamborghni%20Huracan%202019.jpg HTTP/1.1[0m" 304 - ]
+[ 2025-04-03 14:06:17,336 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 14:06:17] "POST /predict HTTP/1.1" 200 - ]
+[ 2025-04-03 14:06:17,424 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 14:06:17] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 14:06:27,334 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 14:06:27] "[33mGET /index.html HTTP/1.1[0m" 404 - ]
+[ 2025-04-03 14:07:57,854 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 14:07:57] "POST /predict HTTP/1.1" 200 - ]
+[ 2025-04-03 14:07:57,868 : _internal : INFO : 127.0.0.1 - - [03/Apr/2025 14:07:57] "[33mGET /styles.css HTTP/1.1[0m" 404 - ]
