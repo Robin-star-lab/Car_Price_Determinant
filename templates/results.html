@@ -115,6 +115,7 @@
     <script>
       console.log("script-loaded")
 
+<<<<<<< HEAD
       document.getElementById("btn").addEventListener("click", function(){
           document.getElementById('results-overlay').classList.remove("overlay-hidden");
       
@@ -140,6 +141,30 @@
       setTimeout(() => {
                   document.getElementById('results-overlay').classList.add('overlay-hidden');
               }, 8000);
+=======
+console.log("script-loaded")
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the prediction value from the template
+    const prediction = parseFloat("{{ prediction }}");
+    
+    // Show the results popup
+    document.getElementById('results-overlay').classList.remove("overlay-hidden");
+    document.getElementById('predicted-price').textContent = prediction.toFixed(2);
+    
+    // Close modal handler
+    document.getElementById('close-results').addEventListener('click', () => {
+        document.getElementById('results-overlay').classList.add("overlay-hidden");
+        window.location.href = 'index.html'; // Redirect back to form
+    });
+    
+    // Auto-close after 8 seconds
+    setTimeout(() => {
+        document.getElementById('results-overlay').classList.add('overlay-hidden');
+    }, 8000);
+});
+
+>>>>>>> 59110b236e03017c94e223ac44b0dee31dd3e9b4
     </script>
 
 </body>
