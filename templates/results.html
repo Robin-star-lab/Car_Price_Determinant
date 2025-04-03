@@ -118,7 +118,7 @@ console.log("script-loaded")
 
 document.addEventListener('DOMContentLoaded', function() {
     // Get the prediction value from the template
-    const prediction = 300
+    const prediction = parseFloat("{{ prediction }}");
     
     // Show the results popup
     document.getElementById('results-overlay').classList.remove("overlay-hidden");
