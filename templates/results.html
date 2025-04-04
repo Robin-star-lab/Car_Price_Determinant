@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close modal handler
     document.getElementById('close-results').addEventListener('click', () => {
         document.getElementById('results-overlay').classList.add("overlay-hidden");
-        window.location.href = '/index.html'; // Redirect back to form
+        window.location.href = "{{ url_for('index') }}"; // Redirect back to form
     });
     
     
