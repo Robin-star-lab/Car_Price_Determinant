@@ -35,8 +35,8 @@ This application aims to provide accurate taxi fare predictions based on various
 1.  **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/yourusername/taxi-fare-prediction.git](https://www.google.com/search?q=https://www.google.com/search%3Fq%3Dhttps://github.com/yourusername/taxi-fare-prediction.git)
-    cd taxi-fare-prediction
+    git clone [https://github.com/Robin-star-lab/Car-Price-Determinant.git]
+    cd Car-Price-Determinant
     ```
 
 2.  **Create a virtual environment (recommended):**
